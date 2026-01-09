@@ -1,31 +1,13 @@
-import { useEffect, useRef, useState } from "react";
-import JsBarcode from "jsbarcode";
+import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { Product, generateBarcodeValue } from "@/data/products";
+import { Product } from "@/data/products";
 
 interface ProductCardProps {
   product: Product;
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const barcodeRef = useRef<SVGSVGElement>(null);
   const [showBarcode, setShowBarcode] = useState(false);
-  const barcodeValue = generateBarcodeValue(product);
-
-  useEffect(() => {
-    if (barcodeRef.current && showBarcode) {
-      JsBarcode(barcodeRef.current, barcodeValue, {
-        format: "CODE128",
-        width: 1.5,
-        height: 50,
-        displayValue: true,
-        fontSize: 12,
-        background: "transparent",
-        lineColor: "#D4AF37",
-        margin: 10,
-      });
-    }
-  }, [barcodeValue, showBarcode]);
 
   return (
     <div className="card-premium group">
@@ -81,11 +63,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
         {/* Barcode Section */}
         {showBarcode && (
-          <div className="mt-4 p-4 bg-secondary rounded-lg text-center print:bg-white">
-            <svg ref={barcodeRef} className="mx-auto" />
-            <p className="text-xs text-muted-foreground mt-2 font-mono">
-              {barcodeValue}
-            </p>
+          <div className="mt-4 p-4 bg-white rounded-lg text-center print:bg-white">
+            <img 
+              src={product.barcodeImage} 
+              alt={`Barcode for ${product.name}`}
+              className="mx-auto max-w-full h-auto"
+            />
           </div>
         )}
       </div>
