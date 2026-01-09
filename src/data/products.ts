@@ -5,6 +5,19 @@ import cookieDoubleChocolate from "@/assets/cookie-double-chocolate.jpg";
 import cookieCoconut from "@/assets/cookie-coconut.jpg";
 import cookiePeanut from "@/assets/cookie-peanut.jpg";
 
+// Barcode images
+import barcodeOsp850 from "@/assets/barcodes/barcode-osp-850.png";
+import barcodeOsp400 from "@/assets/barcodes/barcode-osp-400.png";
+import barcodeOsps850 from "@/assets/barcodes/barcode-osps-850.png";
+import barcodeOsps400 from "@/assets/barcodes/barcode-osps-400.png";
+import barcodeMix850 from "@/assets/barcodes/barcode-mix-850.png";
+import barcodeMix400 from "@/assets/barcodes/barcode-mix-400.png";
+import barcodeMixBox500 from "@/assets/barcodes/barcode-mix-box-500.png";
+import barcodeBarley1kg from "@/assets/barcodes/barcode-barley-1kg.png";
+import barcodeBarley500 from "@/assets/barcodes/barcode-barley-500.png";
+import barcodePorridge1kg from "@/assets/barcodes/barcode-porridge-1kg.png";
+import barcodePorridge500 from "@/assets/barcodes/barcode-porridge-500.png";
+
 export interface Product {
   id: string;
   image: string;
@@ -13,21 +26,8 @@ export interface Product {
   weight: string;
   price: number;
   category: "cookies" | "porridge";
+  barcodeImage: string;
 }
-
-// Generate a unique barcode value from product data
-export const generateBarcodeValue = (product: Product): string => {
-  // Create a code from product name initials + weight + price
-  const nameCode = product.name
-    .split(" ")
-    .map((word) => word[0])
-    .join("")
-    .toUpperCase()
-    .substring(0, 4);
-  const weightNum = product.weight.replace(/[^0-9]/g, "");
-  const priceStr = product.price.toString().padStart(4, "0");
-  return `AZI${nameCode}${weightNum}${priceStr}`;
-};
 
 export const products: Product[] = [
   {
@@ -38,6 +38,7 @@ export const products: Product[] = [
     weight: "850g",
     price: 600,
     category: "cookies",
+    barcodeImage: barcodeOsp850,
   },
   {
     id: "osp-400",
@@ -47,6 +48,7 @@ export const products: Product[] = [
     weight: "400g",
     price: 275,
     category: "cookies",
+    barcodeImage: barcodeOsp400,
   },
   {
     id: "osps-850",
@@ -56,6 +58,7 @@ export const products: Product[] = [
     weight: "850g",
     price: 650,
     category: "cookies",
+    barcodeImage: barcodeOsps850,
   },
   {
     id: "osps-400",
@@ -65,6 +68,7 @@ export const products: Product[] = [
     weight: "400g",
     price: 300,
     category: "cookies",
+    barcodeImage: barcodeOsps400,
   },
   {
     id: "mix-850",
@@ -74,6 +78,7 @@ export const products: Product[] = [
     weight: "850g",
     price: 650,
     category: "cookies",
+    barcodeImage: barcodeMix850,
   },
   {
     id: "mix-400",
@@ -83,6 +88,7 @@ export const products: Product[] = [
     weight: "400g",
     price: 300,
     category: "cookies",
+    barcodeImage: barcodeMix400,
   },
   {
     id: "mix-box-500",
@@ -92,6 +98,7 @@ export const products: Product[] = [
     weight: "500g",
     price: 400,
     category: "cookies",
+    barcodeImage: barcodeMixBox500,
   },
   {
     id: "barley-1kg",
@@ -101,6 +108,7 @@ export const products: Product[] = [
     weight: "1kg",
     price: 450,
     category: "cookies",
+    barcodeImage: barcodeBarley1kg,
   },
   {
     id: "barley-500",
@@ -110,6 +118,7 @@ export const products: Product[] = [
     weight: "500g",
     price: 260,
     category: "cookies",
+    barcodeImage: barcodeBarley500,
   },
   {
     id: "porridge-1kg",
@@ -119,6 +128,7 @@ export const products: Product[] = [
     weight: "1kg",
     price: 450,
     category: "porridge",
+    barcodeImage: barcodePorridge1kg,
   },
   {
     id: "porridge-500",
@@ -128,6 +138,7 @@ export const products: Product[] = [
     weight: "500g",
     price: 200,
     category: "porridge",
+    barcodeImage: barcodePorridge500,
   },
 ];
 
