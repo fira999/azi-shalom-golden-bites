@@ -33,7 +33,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           {product.description}
         </p>
 
-        {/* Price */}
+        {/* Price 
         <div className="flex items-center justify-between mb-4">
           <span className="text-gold font-heading text-2xl font-bold">
             {product.price} <span className="text-sm font-body">ETB</span>
@@ -41,8 +41,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <span className="text-gold/60 font-body text-xs uppercase tracking-wider">
             Azi Shalom
           </span>
-        </div>
-
+        </div> */}
         {/* Barcode Toggle */}
         <button
           onClick={() => setShowBarcode(!showBarcode)}
