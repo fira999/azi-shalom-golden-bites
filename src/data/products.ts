@@ -1,9 +1,9 @@
 import cookieChocolate from "@/assets/cookie-chocolate.jpg";
 import cookieOatmeal from "@/assets/cookie-oatmeal.jpg";
-import cookieButter from "@/assets/cookie-butter.jpg";
-import cookieDoubleChocolate from "@/assets/cookie-double-chocolate.jpg";
+// import cookieButter from "@/assets/cookie-butter.jpg";
+//import cookieDoubleChocolate from "@/assets/cookie-double-chocolate.jpg";
 import cookieCoconut from "@/assets/cookie-coconut.jpg";
-import cookiePeanut from "@/assets/cookie-peanut.jpg";
+//import cookiePeanut from "@/assets/cookie-peanut.jpg";
 
 // Barcode images
 import barcodeOsp850 from "@/assets/barcodes/barcode-osp-850.png";
