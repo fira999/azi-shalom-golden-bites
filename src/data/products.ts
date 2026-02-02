@@ -72,7 +72,7 @@ export const products: Product[] = [
   },
   {
     id: "mix-850",
-    image: cookieButter,
+    image: "https://via.placeholder.com/400x400?text=Cookie",
     name: "Mixed Cookies",
     description: "A delightful assortment of our finest cookie varieties in one premium package.",
     weight: "850g",
@@ -82,7 +82,7 @@ export const products: Product[] = [
   },
   {
     id: "mix-400",
-    image: cookieButter,
+    image: "https://via.placeholder.com/400x400?text=Cookie",
     name: "Mixed Cookies",
     description: "A delightful assortment of our finest cookie varieties in one premium package.",
     weight: "400g",
@@ -92,7 +92,7 @@ export const products: Product[] = [
   },
   {
     id: "mix-box-500",
-    image: cookieDoubleChocolate,
+    image: "https://via.placeholder.com/400x400?text=Cookie",
     name: "Mixed Cookies (Box)",
     description: "Elegantly boxed mixed cookies, perfect for gifting or special occasions.",
     weight: "500g",
@@ -122,7 +122,7 @@ export const products: Product[] = [
   },
   {
     id: "porridge-1kg",
-    image: cookiePeanut,
+    image: "https://via.placeholder.com/400x400?text=Cookie",
     name: "Mixed Porridge Flour",
     description: "Nutritious mixed porridge flour blend for a healthy and energizing breakfast.",
     weight: "1kg",
@@ -132,7 +132,7 @@ export const products: Product[] = [
   },
   {
     id: "porridge-500",
-    image: cookiePeanut,
+    image: "https://via.placeholder.com/400x400?text=Cookie",
     name: "Mixed Porridge Flour",
     description: "Nutritious mixed porridge flour blend for a healthy and energizing breakfast.",
     weight: "500g",
